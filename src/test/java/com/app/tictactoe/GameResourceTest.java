@@ -46,7 +46,7 @@ public class GameResourceTest {
         Response res = invocationBuilder.cookie(cookie).get();
 		assertEquals("Should return status 404", 404, res.getStatus());
     }
-    
+
     @Test
     public void testDeleteGameNotFound() {
         Invocation.Builder invocationBuilder = target.path("game/abc").request(MediaType.APPLICATION_JSON);
